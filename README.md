@@ -4,11 +4,11 @@ Novel Pretender can insert random C# or PHP code to a text file (which may be no
 
 ## Before
 
-![Before](Example/Before.png)
+![Before](/Example/Before.png)
 
 ## After
 
-![After](Example/After.png)
+![After](/Example/After.png)
 
 ## Contributing
 
