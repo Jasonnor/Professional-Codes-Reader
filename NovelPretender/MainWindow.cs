@@ -84,7 +84,7 @@ namespace NovelPretender
                         // Every 3 paragraph, insert code pretend
                         if (string.IsNullOrWhiteSpace(line))
                             ++counter;
-                        if (counter == 3)
+                        if (counter == 5)
                         {
                             counter = 0;
                             using (StreamWriter writer = new StreamWriter(newFilePath, true))
@@ -111,11 +111,6 @@ namespace NovelPretender
                 MessageBox.Show(newFilePath, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 System.Diagnostics.Process.Start(newFilePath);
             }
-        }
-
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

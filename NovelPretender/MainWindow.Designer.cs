@@ -63,7 +63,6 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MainWindow";
             this.Text = "Novel Pretender";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
