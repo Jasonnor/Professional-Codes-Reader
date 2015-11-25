@@ -1,4 +1,4 @@
-# Novel Pretender
+# Novel Pretender [![Build Status](https://travis-ci.org/Jasonnor/NovelPretender.svg?branch=master)](https://travis-ci.org/Jasonnor/NovelPretender)
 
 Novel Pretender can insert random C# or PHP code to a text file (which may be novel or article) paragraphs, and output to html, making it look like a professional or work site.
 
