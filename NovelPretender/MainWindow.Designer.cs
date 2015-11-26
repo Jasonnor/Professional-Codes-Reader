@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.TextLabel = new System.Windows.Forms.Label();
             this.Start = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -37,18 +38,18 @@
             this.TextLabel.AutoSize = true;
             this.TextLabel.Location = new System.Drawing.Point(12, 23);
             this.TextLabel.Name = "TextLabel";
-            this.TextLabel.Size = new System.Drawing.Size(226, 20);
+            this.TextLabel.Size = new System.Drawing.Size(293, 20);
             this.TextLabel.TabIndex = 0;
-            this.TextLabel.Text = "Please select a novel file (.txt)";
+            this.TextLabel.Text = "Please select an article or a novel (.txt)";
             // 
             // Start
             // 
             this.Start.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Start.Location = new System.Drawing.Point(252, 21);
+            this.Start.Location = new System.Drawing.Point(311, 23);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(75, 23);
             this.Start.TabIndex = 1;
-            this.Start.Text = "Start";
+            this.Start.Text = "Browse";
             this.Start.UseVisualStyleBackColor = true;
             this.Start.Click += new System.EventHandler(this.buttonGetFile_Click);
             // 
@@ -56,10 +57,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 66);
+            this.ClientSize = new System.Drawing.Size(407, 66);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.TextLabel);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MainWindow";
             this.Text = "Novel Pretender";
