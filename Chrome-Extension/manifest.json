@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Novel Pretender",
+  "description": "Novel Pretender can insert random C#, PHP or JavaScript code to paragraphs of a website (which may be novels or articles), and making it looks like a professional or work site.",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
