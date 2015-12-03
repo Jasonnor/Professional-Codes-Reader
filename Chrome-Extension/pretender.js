@@ -41,7 +41,7 @@ head.appendChild(script);
 
 // Create CSS
 var sheet = window.document.styleSheets[0];
-sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', sheet.cssRules.length);
+sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
 
 // Catch <p> or <div> as a paragraph
 var divs = document.getElementsByTagName('p');
@@ -51,11 +51,9 @@ if (divs.length === 0)
 for (var i = 0; i < divs.length; i++) {
   // Insert codes every N paragraph
   if (i % numOfParagraph === 0) {
-    //if (divs[i].style.backgroundColor === colorToCompare)
-    //  continue;
     var newNode = document.createElement('pre');
     newNode.className = 'prettyprint linenums';
-    newNode.style.cssText = 'width:80%; margin:0 auto;';
+    newNode.style.cssText = 'width:80%; margin:20px auto;';
     content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
     newNode.appendChild(content);
     divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
