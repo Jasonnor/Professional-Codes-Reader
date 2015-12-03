@@ -8,4 +8,4 @@ Please feel free to use it if you are interested in fixing issues and contributi
 
 ## License
 
-Novel Pretender is released under the [MIT](LICENSE.txt) license.
+Novel Pretender is released under the [MIT](LICENSE) license.

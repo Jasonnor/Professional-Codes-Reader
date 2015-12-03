@@ -18,4 +18,4 @@ This is a simple C# Windows Forms Application, please feel free to use it if you
 
 ## License
 
-Novel Pretender is released under the [MIT](LICENSE.txt) license.
+Novel Pretender is released under the [MIT](LICENSE) license.
