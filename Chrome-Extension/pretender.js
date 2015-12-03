@@ -37,25 +37,26 @@ var head = document.getElementsByTagName('head')[0];
 var script = document.createElement('script');
 script.type = 'text/javascript';
 script.src = 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true';
-head.appendChild(script);
+script.onload = function () {
+  // Create CSS
+  var sheet = window.document.styleSheets[0];
+  sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
 
-// Create CSS
-var sheet = window.document.styleSheets[0];
-sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
+  // Catch <p> or <div> as a paragraph
+  var divs = document.getElementsByTagName('p');
+  if (divs.length === 0)
+    divs = document.getElementsByTagName('div');
 
-// Catch <p> or <div> as a paragraph
-var divs = document.getElementsByTagName('p');
-if (divs.length === 0)
-  divs = document.getElementsByTagName('div');
-
-for (var i = 0; i < divs.length; i++) {
-  // Insert codes every N paragraph
-  if (i % numOfParagraph === 0) {
-    var newNode = document.createElement('pre');
-    newNode.className = 'prettyprint linenums';
-    newNode.style.cssText = 'width:80%; margin:20px auto;';
-    content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
-    newNode.appendChild(content);
-    divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
+  for (var i = 0; i < divs.length; i++) {
+    // Insert codes every N paragraph
+    if (i % numOfParagraph === 0) {
+      var newNode = document.createElement('pre');
+      newNode.className = 'prettyprint linenums';
+      newNode.style.cssText = 'margin:20px auto;';
+      content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
+      newNode.appendChild(content);
+      divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
+    }
   }
-}
+};
+head.appendChild(script);
