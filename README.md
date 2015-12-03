@@ -2,7 +2,7 @@
 
 Novel Pretender can insert random C#, PHP or jQuery code to paragraphs of a text file (which may be novel or article), and output to HTML, making it looks like a professional or work site.
 
-It also have chrome extension version, see [here](/Chrome-Extension/README.md).
+It also have chrome extension version, see [here](/Chrome-Extension/).
 
 ## Before
 
@@ -18,4 +18,4 @@ This is a simple C# Windows Forms Application, please feel free to use it if you
 
 ## License
 
-Novel Pretender is released under the [MIT](LICENSE) license.
+Novel Pretender is released under the [MIT](/LICENSE) license.
