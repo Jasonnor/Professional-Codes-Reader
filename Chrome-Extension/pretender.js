@@ -1,5 +1,5 @@
 // Defined how many paragraphs to insert code
-var numOfParagraph = 4;
+var numOfParagraph = 3;
 
 var codeArray = [
   // C# code

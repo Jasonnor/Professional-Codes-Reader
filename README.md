@@ -2,6 +2,8 @@
 
 Novel Pretender can insert random C#, PHP or jQuery code to paragraphs of a text file (which may be novel or article), and output to HTML, making it looks like a professional or work site.
 
+It also have chrome extension version, see [here](/Chrome-Extension/README.md).
+
 ## Before
 
 ![Before](/Example/Before.png)
