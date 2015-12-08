@@ -52,7 +52,7 @@ script.onload = function () {
     if (i % numOfParagraph === 0) {
       var newNode = document.createElement('pre');
       newNode.className = 'prettyprint linenums';
-      newNode.style.cssText = 'margin:20px auto;';
+      newNode.style.cssText = 'width:auto; overflow:auto; max-height:600px; margin:20px auto;';
       content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
       newNode.appendChild(content);
       divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
