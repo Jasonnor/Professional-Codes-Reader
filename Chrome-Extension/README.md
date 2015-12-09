@@ -6,21 +6,21 @@ Novel Pretender can insert random C#, PHP or jQuery code to paragraphs of a webp
 
 **Before**
 
-![Before](/Example/Novel_Before.png)
+![Before](/Chrome-Extension/Example/Novel_Before.png)
 
 **After**
 
-![After](/Example/Novel_After.png)
+![After](/Chrome-Extension/Example/Novel_After.png)
 
 ## Articles
 
 **Before**
 
-![Before](/Example/Article_Before.png)
+![Before](/Chrome-Extension/Example/Article_Before.png)
 
 **After**
 
-![After](/Example/Article_After.png)
+![After](/Chrome-Extension/Example/Article_After.png)
 
 ## Contributing
 
@@ -28,4 +28,4 @@ Please feel free to use it if you are interested in fixing issues and contributi
 
 ## License
 
-Novel Pretender is released under the [MIT](/LICENSE) license.
+Novel Pretender is released under the [MIT](/Chrome-Extension/LICENSE) license.
