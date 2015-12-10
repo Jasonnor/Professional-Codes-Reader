@@ -1,4 +1,4 @@
-# Professional Codes Reader [![Build Status](https://travis-ci.org/Jasonnor/NovelPretender.svg?branch=master)](https://travis-ci.org/Jasonnor/NovelPretender)
+# Professional Codes Reader [![Build Status](https://travis-ci.org/Jasonnor/Professional-Codes-Reader.svg?branch=v1.0.3)](https://travis-ci.org/Jasonnor/Professional-Codes-Reader)
 
 Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs of a webpage (which may be novels or articles), and making it looks like a professional or work site.
 
