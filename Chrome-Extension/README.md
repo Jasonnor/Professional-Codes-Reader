@@ -22,6 +22,12 @@ Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs
 
 ![After](/Chrome-Extension/Example/Article_After.png)
 
+## Demo
+
+![Feedly](/Chrome-Extension/Example/Demo_Feedly.gif)
+
+![Wikipedia](/Chrome-Extension/Example/Demo_Wikipedia.gif)
+
 ## Contributing
 
 Please feel free to use it if you are interested in fixing issues and contributing directly to the code base.
