@@ -23,12 +23,12 @@ function saveOptions(e) {
     console.log('Set element options as ' + element);
     console.log('Set paragraph options as ' + paragraph);
     var status = document.getElementById('status');
+    status.style.opacity = 1;
     status.style.display = 'block';
     status.textContent = 'Options saved.';
-    fade(status);
-    /*setTimeout(function() {
-      status.textContent = '';
-    }, 750);*/
+    setTimeout(function() {
+      fade(status);
+    }, 300);
   });
 }
 
@@ -52,7 +52,7 @@ function fade(element) {
     element.style.opacity = op;
     element.style.filter = 'alpha(opacity=' + op * 100 + ")";
     op -= op * 0.1;
-  }, 60);
+  }, 35);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
