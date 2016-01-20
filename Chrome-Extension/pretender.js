@@ -47,21 +47,24 @@ script.onload = function() {
   var sheet = window.document.styleSheets[0];
   sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
 
-  // Catch <p> or <div> as a paragraph
-  var divs = document.getElementsByTagName('p');
-  if (divs.length === 0)
-    divs = document.getElementsByTagName('div');
+  // Catch element at options as a paragraph
+  chrome.storage.sync.get({
+    element: 'p'
+  }, function(items) {
+    var divs = document.getElementsByTagName(items.element);
+    console.log('Load element options : ' + items.element);
 
-  for (var i = 0; i < divs.length; i++) {
-    // Insert codes every N paragraph
-    if (i % numOfParagraph === 0) {
-      var newNode = document.createElement('pre');
-      newNode.className = 'prettyprint linenums';
-      newNode.style.cssText = 'width:auto; overflow:auto; max-height:600px; margin:20px auto;';
-      content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
-      newNode.appendChild(content);
-      divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
+    for (var i = 0; i < divs.length; i++) {
+      // Insert codes every N paragraph
+      if (i % numOfParagraph === 0) {
+        var newNode = document.createElement('pre');
+        newNode.className = 'prettyprint linenums';
+        newNode.style.cssText = 'width:auto; overflow:auto; max-height:600px; margin:20px auto;';
+        content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
+        newNode.appendChild(content);
+        divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
+      }
     }
-  }
+  });
 };
 head.appendChild(script);
