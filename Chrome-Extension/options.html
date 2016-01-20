@@ -1,18 +1,41 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Options</title>
-    <script src="options.js"></script>
-  </head>
-  <body>
-    <h1>Element to Catch</h1>
-    <select id="element">
-      <option value="p">&lt;p&gt;</option>
-      <option value="div">&lt;div&gt;</option>
-      <option value="br">&lt;br&gt;</option>
-    </select>
-    <button id="save">Save</button>
-    <button id="clear">Restore default</button>
-    <div id="status"></div>
-  </body>
+
+<head>
+  <title>Options</title>
+  <script src="options.js"></script>
+</head>
+
+<body style="margin:20px; line-height:50px">
+  <div class="content" style="width: 520px">
+    <h1>Options</h1>
+    <div style="float:left; width:350px">
+      <div>
+        Defined what element to catch as a paragraph :
+      </div>
+      <div>
+        Defined how many paragraphs to insert code :
+      </div>
+    </div>
+    <div style="clear:right">
+      <div>
+        <select id="element">
+          <option value="p">&lt;p&gt;</option>
+          <option value="div">&lt;div&gt;</option>
+          <option value="br">&lt;br&gt;</option>
+        </select>
+      </div>
+      <div>
+        <input id="paragraph" type="range" min="1" max="10" />
+        <span id="range"></span>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <button id="save">Save</button>
+      <button id="clear">Default</button>
+    </div>
+    <div id="status" style="line-height: 10px"></div>
+  </div>
+</body>
+
 </html>

@@ -1,6 +1,3 @@
-// Defined how many paragraphs to insert code
-var numOfParagraph = 3;
-
 var codeArray = [
   // C# code
   "public static class PointFunctions\n{\n    public static double DistanceTo(this Point point1, Point point2)\n    {\n        var a = (double)(point2.X - point1.X);\n        var b = (double)(point2.Y - point1.Y);\n\n        return Math.Sqrt(a * a + b * b);\n    }\n}",
@@ -47,16 +44,22 @@ script.onload = function() {
   var sheet = window.document.styleSheets[0];
   sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
 
-  // Catch element at options as a paragraph
+  // Loading Options
   chrome.storage.sync.get({
-    element: 'p'
+    element: 'p',
+    paragraph: 3
   }, function(items) {
+    // Defined what element to catch as a paragraph
     var divs = document.getElementsByTagName(items.element);
     console.log('Load element options : ' + items.element);
 
+    // Defined how many paragraphs to insert code
+    var paragraph = items.paragraph;
+    console.log('Load paragraph options : ' + items.paragraph);
+
     for (var i = 0; i < divs.length; i++) {
       // Insert codes every N paragraph
-      if (i % numOfParagraph === 0) {
+      if (i % paragraph === 0) {
         var newNode = document.createElement('pre');
         newNode.className = 'prettyprint linenums';
         newNode.style.cssText = 'width:auto; overflow:auto; max-height:600px; margin:20px auto;';
