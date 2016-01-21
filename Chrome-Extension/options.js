@@ -4,17 +4,18 @@ function loadOptions() {
     element: 'p',
     paragraph: 3
   }, function(items) {
-    document.getElementById('element').value = items.element;
-    document.getElementById('paragraph').value = items.paragraph;
-    document.getElementById('range').innerHTML = items.paragraph;
+    $('element').value = items.element;
+    $('paragraph').value = items.paragraph;
+    $('range').innerHTML = items.paragraph;
     console.log('Load element options : ' + items.element);
     console.log('Load paragraph options : ' + items.paragraph);
   });
 }
 
 function saveOptions(e) {
-  var element = document.getElementById('element').value;
-  var paragraph = document.getElementById('paragraph').value;
+  $('save').addClass('onClick', 250, validate);
+  var element = $('element').value;
+  var paragraph = $('paragraph').value;
   chrome.storage.sync.set({
     element: element,
     paragraph: paragraph
@@ -22,7 +23,7 @@ function saveOptions(e) {
     // Update status to let user know options were saved.
     console.log('Set element options as ' + element);
     console.log('Set paragraph options as ' + paragraph);
-    var status = document.getElementById('status');
+    var status = $('status');
     status.style.opacity = 1;
     status.style.display = 'block';
     status.textContent = 'Options saved.';
@@ -38,8 +39,8 @@ function clearOptions() {
 }
 
 function showRangeValue() {
-  var newValue = document.getElementById('paragraph').value;
-  document.getElementById('range').innerHTML = newValue;
+  var newValue = $('paragraph').value;
+  $('range').innerHTML = newValue;
 }
 
 function fade(element) {
@@ -50,14 +51,27 @@ function fade(element) {
       element.style.display = 'none';
     }
     element.style.opacity = op;
-    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+    element.style.filter = 'alpha(opacity=' + op * 100 + ')';
     op -= op * 0.1;
   }, 35);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   loadOptions();
-  document.getElementById('save').addEventListener('click', saveOptions);
-  document.getElementById('clear').addEventListener('click', clearOptions);
-  document.getElementById('paragraph').addEventListener('input', showRangeValue);
+  $('save').addEventListener('click', saveOptions);
+  $('clear').addEventListener('click', clearOptions);
+  $('paragraph').addEventListener('input', showRangeValue);
 });
+
+function validate() {
+  setTimeout(function() {
+    $('#save').removeClass('onClick');
+    $('#save').addClass('validate', 450, callback);
+  }, 500);
+}
+
+function callback() {
+  setTimeout(function() {
+    $('#save').removeClass('validate');
+  }, 1000);
+}
