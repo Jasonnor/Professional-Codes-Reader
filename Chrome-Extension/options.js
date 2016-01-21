@@ -4,18 +4,17 @@ function loadOptions() {
     element: 'p',
     paragraph: 3
   }, function(items) {
-    $('element').value = items.element;
-    $('paragraph').value = items.paragraph;
-    $('range').innerHTML = items.paragraph;
+    document.getElementById('element').value = items.element;
+    document.getElementById('paragraph').value = items.paragraph;
+    document.getElementById('range').innerHTML = items.paragraph;
     console.log('Load element options : ' + items.element);
     console.log('Load paragraph options : ' + items.paragraph);
   });
 }
 
-function saveOptions(e) {
-  $('save').addClass('onClick', 250, validate);
-  var element = $('element').value;
-  var paragraph = $('paragraph').value;
+function saveOptions() {
+  var element = document.getElementById('element').value;
+  var paragraph = document.getElementById('paragraph').value;
   chrome.storage.sync.set({
     element: element,
     paragraph: paragraph
@@ -23,7 +22,7 @@ function saveOptions(e) {
     // Update status to let user know options were saved.
     console.log('Set element options as ' + element);
     console.log('Set paragraph options as ' + paragraph);
-    var status = $('status');
+    var status = document.getElementById('status');
     status.style.opacity = 1;
     status.style.display = 'block';
     status.textContent = 'Options saved.';
@@ -39,8 +38,8 @@ function clearOptions() {
 }
 
 function showRangeValue() {
-  var newValue = $('paragraph').value;
-  $('range').innerHTML = newValue;
+  var newValue = document.getElementById('paragraph').value;
+  document.getElementById('range').innerHTML = newValue;
 }
 
 function fade(element) {
@@ -58,20 +57,7 @@ function fade(element) {
 
 document.addEventListener('DOMContentLoaded', function() {
   loadOptions();
-  $('save').addEventListener('click', saveOptions);
-  $('clear').addEventListener('click', clearOptions);
-  $('paragraph').addEventListener('input', showRangeValue);
+  document.getElementById('save').addEventListener('click', saveOptions);
+  document.getElementById('clear').addEventListener('click', clearOptions);
+  document.getElementById('paragraph').addEventListener('input', showRangeValue);
 });
-
-function validate() {
-  setTimeout(function() {
-    $('#save').removeClass('onClick');
-    $('#save').addClass('validate', 450, callback);
-  }, 500);
-}
-
-function callback() {
-  setTimeout(function() {
-    $('#save').removeClass('validate');
-  }, 1000);
-}

@@ -45,52 +45,6 @@ body {
 .options-button > button:active {
   letter-spacing: 2px;
 }
-.onClick {
-  width: 40px;
-  border-color: #bbbbbb;
-  border-width: 3px;
-  font-size: 0;
-  border-left-color: #1ECD97;
-  -moz-animation: rotating 2s 0.25s linear infinite;
-  -webkit-animation: rotating 2s 0.25s linear infinite;
-  animation: rotating 2s 0.25s linear infinite;
-}
-.onClick:after {
-  content: "";
-}
-.onClick:hover {
-  color: #1ECD97;
-  background: white;
-}
-.validate {
-  font-size: 13px;
-  color: white;
-  background: #1ECD97;
-}
-.validate:after {
-  font-family: 'FontAwesome';
-  content: "\f00c";
-}
-@-webkit-keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 .status {
   line-height: 70px;
   margin: 0 auto;
