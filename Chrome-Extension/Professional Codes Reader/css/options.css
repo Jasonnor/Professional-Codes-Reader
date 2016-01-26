@@ -1,0 +1,29 @@
+body {
+  margin: 20px;
+  background-color: #ECECEC;
+}
+.content {
+  width: 620px;
+  font-size: 18px;
+}
+.options-text {
+  float: left;
+  width: 400px;
+  margin-top: 1rem;
+  line-height: 45px;
+}
+.options-input {
+  float: left;
+}
+.options-button {
+  clear: left;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 16px;
+}
+.options-button > a {
+  margin: 0 1.5rem 0 1.5rem;
+}
+.status {
+  font-size: 20px;
+}

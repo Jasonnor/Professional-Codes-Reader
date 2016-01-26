@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  $('select').material_select();
+});
+
 function loadOptions() {
   // Set default options as p
   chrome.storage.sync.get({
@@ -10,8 +14,8 @@ function loadOptions() {
       if (items.element.indexOf(options[i].value) != -1)
         options[i].selected = true;
     }
+    $('select').material_select();
     document.getElementById('paragraph').value = items.paragraph;
-    document.getElementById('range').innerHTML = items.paragraph;
     console.log('Load element options : ' + items.element);
     console.log('Load paragraph options : ' + items.paragraph);
   });
@@ -33,13 +37,7 @@ function saveOptions() {
     // Update status to let user know options were saved.
     console.log('Set element options as ' + element);
     console.log('Set paragraph options as ' + paragraph);
-    var status = document.getElementById('status');
-    status.style.opacity = 1;
-    status.style.display = 'block';
-    status.textContent = 'Options saved.';
-    setTimeout(function() {
-      fade(status);
-    }, 300);
+    Materialize.toast('Options saved.', 4000, 'status');
   });
 }
 
@@ -48,27 +46,8 @@ function clearOptions() {
   location.reload();
 }
 
-function showRangeValue() {
-  var newValue = document.getElementById('paragraph').value;
-  document.getElementById('range').innerHTML = newValue;
-}
-
-function fade(element) {
-  var op = 1; // initial opacity
-  var timer = setInterval(function() {
-    if (op <= 0.1) {
-      clearInterval(timer);
-      element.style.display = 'none';
-    }
-    element.style.opacity = op;
-    element.style.filter = 'alpha(opacity=' + op * 100 + ')';
-    op -= op * 0.1;
-  }, 35);
-}
-
 document.addEventListener('DOMContentLoaded', function() {
   loadOptions();
   document.getElementById('save').addEventListener('click', saveOptions);
   document.getElementById('clear').addEventListener('click', clearOptions);
-  document.getElementById('paragraph').addEventListener('input', showRangeValue);
 });

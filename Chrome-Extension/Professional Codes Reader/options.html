@@ -3,7 +3,8 @@
 
 <head>
   <title>Options</title>
-  <link rel="stylesheet" type="text/css" href="options.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/options.css">
 </head>
 
 <body>
@@ -18,24 +19,26 @@
       </div>
     </div>
     <div class="options-input">
-      <div>
+      <div class="input-field col s12">
         <select id="element" multiple>
           <option value="p">&lt;p&gt;</option>
           <option value="div">&lt;div&gt;</option>
           <option value="br">&lt;br&gt;</option>
         </select>
       </div>
-      <div>
+      <div class="range-field">
         <input id="paragraph" type="range" min="1" max="10" />
-        <span id="range"></span>
       </div>
     </div>
     <div class="options-button">
-      <button id="save">Save</button>
-      <button id="clear">Default</button>
+      <a id="save" class="waves-effect waves-light btn">Save</a>
+      <a id="clear" class="waves-effect waves-light btn">Default</a>
     </div>
     <div id="status" class="status"></div>
-    <script src="options.js"></script>
+  </div>
+  <script src="js/jquery-2.2.0.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/options.js"></script>
 </body>
 
 </html>
