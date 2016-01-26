@@ -1,10 +1,15 @@
 function loadOptions() {
   // Set default options as p
   chrome.storage.sync.get({
-    element: 'p',
+    element: ['p', 'br'],
     paragraph: 3
   }, function(items) {
-    document.getElementById('element').value = items.element;
+    var select = document.getElementById('element');
+    var options = select && select.options;
+    for (var i = 0; i < options.length; i++) {
+      if (items.element.indexOf(options[i].value) != -1)
+        options[i].selected = true;
+    }
     document.getElementById('paragraph').value = items.paragraph;
     document.getElementById('range').innerHTML = items.paragraph;
     console.log('Load element options : ' + items.element);
@@ -13,8 +18,14 @@ function loadOptions() {
 }
 
 function saveOptions() {
-  var element = document.getElementById('element').value;
   var paragraph = document.getElementById('paragraph').value;
+  var select = document.getElementById('element');
+  var options = select && select.options;
+  var element = [];
+  for (var i = 0; i < options.length; i++) {
+    if (options[i].selected)
+      element.push(options[i].value);
+  }
   chrome.storage.sync.set({
     element: element,
     paragraph: paragraph

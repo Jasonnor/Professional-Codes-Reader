@@ -46,11 +46,11 @@ script.onload = function() {
 
   // Loading Options
   chrome.storage.sync.get({
-    element: 'p',
+    element: ['p', 'br'],
     paragraph: 3
   }, function(items) {
     // Defined what element to catch as a paragraph
-    var divs = document.getElementsByTagName(items.element);
+    var divs = document.querySelectorAll(items.element);
     console.log('Load element options : ' + items.element);
 
     // Defined how many paragraphs to insert code
