@@ -34,49 +34,48 @@ var codeArray = [
   "// Trigger on visibility change\n$(document).on('visibilitychange', function (e) {\n	if (e.target.visibilityState === 'visible') {\n		console.log('Tab is now in view!');\n	} else if (e.target.visibilityState === 'hidden') {\n		console.log('Tab is now hidden!');\n	}\n});"
 ];
 
-// Create HTML Header and load script
+// Create CSS
 var head = document.getElementsByTagName('head')[0];
+var sheet = window.document.styleSheets[0];
+if (!sheet) {
+  // Create the <style> tag
+  var style = document.createElement('style');
+  // WebKit hack :(
+  style.appendChild(document.createTextNode(''));
+  // Add the <style> element to the page
+  head.appendChild(style);
+  sheet = style.sheet;
+}
+sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
+
+// Loading Options
+chrome.storage.sync.get({
+  element: ['p', 'br'],
+  paragraph: 3
+}, function(items) {
+  // Defined what element to catch as a paragraph
+  var divs = document.querySelectorAll(items.element);
+  console.log('Load element options : ' + items.element);
+
+  // Defined how many paragraphs to insert code
+  var paragraph = items.paragraph;
+  console.log('Load paragraph options : ' + items.paragraph);
+
+  for (var i = 0; i < divs.length; i++) {
+    // Insert codes every N paragraph
+    if (i % paragraph === 0) {
+      var newNode = document.createElement('pre');
+      newNode.className = 'prettyprint linenums';
+      newNode.style.cssText = 'width:auto; overflow:auto; max-height:600px; margin:20px auto;';
+      content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
+      newNode.appendChild(content);
+      divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
+    }
+  }
+});
+
+// Create and load script
 var script = document.createElement('script');
 script.type = 'text/javascript';
 script.src = 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true';
-script.onload = function() {
-  // Create CSS
-  var sheet = window.document.styleSheets[0];
-  if (!sheet) {
-    // Create the <style> tag
-    var style = document.createElement('style');
-    // WebKit hack :(
-    style.appendChild(document.createTextNode(''));
-    // Add the <style> element to the page
-    head.appendChild(style);
-    sheet = style.sheet;
-  }
-  sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
-
-  // Loading Options
-  chrome.storage.sync.get({
-    element: ['p', 'br'],
-    paragraph: 3
-  }, function(items) {
-    // Defined what element to catch as a paragraph
-    var divs = document.querySelectorAll(items.element);
-    console.log('Load element options : ' + items.element);
-
-    // Defined how many paragraphs to insert code
-    var paragraph = items.paragraph;
-    console.log('Load paragraph options : ' + items.paragraph);
-
-    for (var i = 0; i < divs.length; i++) {
-      // Insert codes every N paragraph
-      if (i % paragraph === 0) {
-        var newNode = document.createElement('pre');
-        newNode.className = 'prettyprint linenums';
-        newNode.style.cssText = 'width:auto; overflow:auto; max-height:600px; margin:20px auto;';
-        content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
-        newNode.appendChild(content);
-        divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
-      }
-    }
-  });
-};
 head.appendChild(script);
