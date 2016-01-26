@@ -1,3 +1,3 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-  chrome.tabs.executeScript(null, {file: 'pretender.js'});
+  chrome.tabs.executeScript(null, {file: 'js/pretender.js'});
 });
