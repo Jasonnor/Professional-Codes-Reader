@@ -2,8 +2,6 @@
 
 Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs of a webpage (which may be novels or articles), and making it looks like a professional or work site.
 
-## Options
-
 ![Options](/Chrome-Extension/Example/Options.png)
 
 ## Novels
