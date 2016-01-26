@@ -42,6 +42,15 @@ script.src = 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_pret
 script.onload = function() {
   // Create CSS
   var sheet = window.document.styleSheets[0];
+  if (!sheet) {
+    // Create the <style> tag
+    var style = document.createElement('style');
+    // WebKit hack :(
+    style.appendChild(document.createTextNode(''));
+    // Add the <style> element to the page
+    head.appendChild(style);
+    sheet = style.sheet;
+  }
   sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
 
   // Loading Options
