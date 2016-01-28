@@ -1,7 +1,0 @@
-E:\Workspace\NovelPretender\NovelPretender\bin\Release\NovelPretender.exe
-E:\Workspace\NovelPretender\NovelPretender\bin\Release\NovelPretender.pdb
-E:\Workspace\NovelPretender\NovelPretender\obj\x86\Release\NovelPretender.MainWindow.resources
-E:\Workspace\NovelPretender\NovelPretender\obj\x86\Release\NovelPretender.Properties.Resources.resources
-E:\Workspace\NovelPretender\NovelPretender\obj\x86\Release\NovelPretender.csproj.GenerateResource.Cache
-E:\Workspace\NovelPretender\NovelPretender\obj\x86\Release\NovelPretender.exe
-E:\Workspace\NovelPretender\NovelPretender\obj\x86\Release\NovelPretender.pdb
