@@ -1,7 +1,3 @@
-$(document).ready(function() {
-  $('select').material_select();
-});
-
 function loadOptions() {
   // Set default options as p
   chrome.storage.sync.get({
