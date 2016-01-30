@@ -14,6 +14,7 @@ body {
 }
 .options-input {
   float: left;
+  width: 195px;
 }
 .options-button {
   clear: left;

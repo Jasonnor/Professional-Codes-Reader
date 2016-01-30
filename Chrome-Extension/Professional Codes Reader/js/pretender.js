@@ -51,7 +51,7 @@ sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 
 // Loading Options
 chrome.storage.sync.get({
   element: ['p', 'br'],
-  paragraph: 3
+  paragraph: 2
 }, function(items) {
   // Defined what element to catch as a paragraph
   var divs = document.querySelectorAll(items.element);

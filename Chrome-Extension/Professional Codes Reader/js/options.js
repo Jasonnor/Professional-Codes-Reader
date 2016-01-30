@@ -2,7 +2,7 @@ function loadOptions() {
   // Set default options as p
   chrome.storage.sync.get({
     element: ['p', 'br'],
-    paragraph: 3
+    paragraph: 2
   }, function(items) {
     var select = document.getElementById('element');
     var options = select && select.options;
