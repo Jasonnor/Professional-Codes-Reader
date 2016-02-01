@@ -46,7 +46,8 @@ if (!sheet) {
   head.appendChild(style);
   sheet = style.sheet;
 }
-sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal; }', 0);
+sheet.insertRule('.prettyprint ol.linenums > li { list-style-type: decimal !important; }', 0);
+sheet.insertRule('pre.prettyprint { background: #FFF !important; }', 0);
 
 // Loading Options
 chrome.storage.sync.get({
