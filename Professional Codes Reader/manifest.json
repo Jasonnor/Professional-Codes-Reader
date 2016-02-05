@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Professional Codes Reader",
+  "description": "Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs of a webpage, and making it looks like a professional site.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}

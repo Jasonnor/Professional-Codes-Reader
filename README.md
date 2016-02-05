@@ -1,20 +1,40 @@
 # Professional Codes Reader [![Build Status](https://travis-ci.org/Jasonnor/Professional-Codes-Reader.svg?branch=v1.0.3)](https://travis-ci.org/Jasonnor/Professional-Codes-Reader)
 
-Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs of a text file (which may be novel or article), and output to HTML, making it looks like a professional or work site.
+Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs of a webpage (which may be novels or articles), and making it looks like a professional or work site.
 
-It also have chrome extension version, see [here](/Chrome-Extension/).
+It also have WinForms Application version, see [here](/WinForms Application/).
 
-## Before
+![Options](/Example/Options.png)
 
-![Before](/Example/Before.png)
+## Novels
 
-## After
+**Before**
 
-![After](/Example/After.png)
+![Before](/Example/Novel_Before.png)
+
+**After**
+
+![After](/Example/Novel_After.png)
+
+## Articles
+
+**Before**
+
+![Before](/Example/Article_Before.png)
+
+**After**
+
+![After](/Example/Article_After.png)
+
+## Demo
+
+![Feedly](/Example/Demo_Feedly.gif)
+
+![Wikipedia](/Example/Demo_Wikipedia.gif)
 
 ## Contributing
 
-This is a simple C# Windows Forms Application, please feel free to use it if you are interested in fixing issues and contributing directly to the code base.
+Please feel free to use it if you are interested in fixing issues and contributing directly to the code base.
 
 ## License
 
