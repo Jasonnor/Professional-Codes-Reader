@@ -4,11 +4,11 @@ Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs
 
 ## Before
 
-![Before](/WinForms Application/Example/Before.png)
+![Before](/WinForms-Application/Example/Before.png)
 
 ## After
 
-![After](/WinForms Application/Example/After.png)
+![After](/WinForms-Application/Example/After.png)
 
 ## Contributing
 
@@ -16,4 +16,4 @@ This is a simple C# Windows Forms Application, please feel free to use it if you
 
 ## License
 
-Professional Codes Reader is released under the [MIT](/WinForms Application/LICENSE) license.
+Professional Codes Reader is released under the [MIT](/WinForms-Application/LICENSE) license.
