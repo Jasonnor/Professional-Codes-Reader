@@ -2,7 +2,7 @@
 
 Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs of a webpage (which may be novels or articles), and making it looks like a professional or work site.
 
-It also have WinForms Application version, see [here](/WinForms Application/).
+It also have WinForms Application version, see [here](/WinForms-Application/).
 
 ![Options](/Example/Options.png)
 
