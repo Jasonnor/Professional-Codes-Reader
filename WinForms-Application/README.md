@@ -10,6 +10,10 @@ Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs
 
 ![After](/WinForms-Application/Example/After.png)
 
+## Reference
+
++ [Google](https://github.com/google) - [code-prettify](https://github.com/google/code-prettify)
+
 ## Contributing
 
 This is a simple C# Windows Forms Application, please feel free to use it if you are interested in fixing issues and contributing directly to the code base.

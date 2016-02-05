@@ -32,6 +32,11 @@ It also have WinForms Application version, see [here](/WinForms Application/).
 
 ![Wikipedia](/Example/Demo_Wikipedia.gif)
 
+## Reference
+
++ [Google](https://github.com/google) - [code-prettify](https://github.com/google/code-prettify)
++ [Dogfalo](https://github.com/Dogfalo) - [Materialize](https://github.com/dogfalo/materialize/)
+
 ## Contributing
 
 Please feel free to use it if you are interested in fixing issues and contributing directly to the code base.
