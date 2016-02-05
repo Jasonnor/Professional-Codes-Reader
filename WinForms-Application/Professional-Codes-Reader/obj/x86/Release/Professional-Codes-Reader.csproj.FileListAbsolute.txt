@@ -1,0 +1,7 @@
+E:\Workspace\Professional-Codes-Reader\WinForms-Application\Professional-Codes-Reader\bin\Release\Professional-Codes-Reader.exe
+E:\Workspace\Professional-Codes-Reader\WinForms-Application\Professional-Codes-Reader\bin\Release\Professional-Codes-Reader.pdb
+E:\Workspace\Professional-Codes-Reader\WinForms-Application\Professional-Codes-Reader\obj\x86\Release\Professional_Codes_Reader.MainWindow.resources
+E:\Workspace\Professional-Codes-Reader\WinForms-Application\Professional-Codes-Reader\obj\x86\Release\Professional-Codes-Reader.Properties.Resources.resources
+E:\Workspace\Professional-Codes-Reader\WinForms-Application\Professional-Codes-Reader\obj\x86\Release\Professional-Codes-Reader.csproj.GenerateResource.Cache
+E:\Workspace\Professional-Codes-Reader\WinForms-Application\Professional-Codes-Reader\obj\x86\Release\Professional-Codes-Reader.exe
+E:\Workspace\Professional-Codes-Reader\WinForms-Application\Professional-Codes-Reader\obj\x86\Release\Professional-Codes-Reader.pdb

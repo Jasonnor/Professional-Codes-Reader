@@ -1,7 +1,0 @@
-E:\Workspace\NovelPretender\Professional Codes Reader\obj\x86\Debug\Professional_Codes_Reader.MainWindow.resources
-E:\Workspace\NovelPretender\Professional Codes Reader\obj\x86\Debug\Professional Codes Reader.Properties.Resources.resources
-E:\Workspace\NovelPretender\Professional Codes Reader\obj\x86\Debug\Professional Codes Reader.csproj.GenerateResource.Cache
-E:\Workspace\NovelPretender\Professional Codes Reader\bin\Debug\Professional Codes Reader.exe
-E:\Workspace\NovelPretender\Professional Codes Reader\bin\Debug\Professional Codes Reader.pdb
-E:\Workspace\NovelPretender\Professional Codes Reader\obj\x86\Debug\Professional Codes Reader.exe
-E:\Workspace\NovelPretender\Professional Codes Reader\obj\x86\Debug\Professional Codes Reader.pdb
