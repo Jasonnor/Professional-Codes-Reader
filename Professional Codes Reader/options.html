@@ -17,6 +17,9 @@
       <div>
         Defined how many paragraphs to insert code :
       </div>
+      <div>
+        Defined if change web title randomly :
+      </div>
     </div>
     <div class="options-input">
       <div class="input-field col s12">
@@ -25,10 +28,20 @@
           <option value="br">&lt;br&gt;</option>
           <option value="div">&lt;div&gt;</option>
           <option value="span">&lt;span&gt;</option>
+          <option value="dd">&lt;dd&gt;</option>
+          <option value="li">&lt;li&gt;</option>
         </select>
       </div>
       <div class="range-field">
         <input id="paragraph" type="range" min="1" max="20" />
+      </div>
+      <div class="switch">
+        <label>
+          Off
+          <input id="enableTitle" type="checkbox">
+          <span class="lever"></span>
+          On
+        </label>
       </div>
     </div>
     <div class="options-button">

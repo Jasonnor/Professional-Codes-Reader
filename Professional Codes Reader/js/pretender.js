@@ -34,6 +34,30 @@ var codeArray = [
   "// Trigger on visibility change\n$(document).on('visibilitychange', function (e) {\n	if (e.target.visibilityState === 'visible') {\n		console.log('Tab is now in view!');\n	} else if (e.target.visibilityState === 'hidden') {\n		console.log('Tab is now hidden!');\n	}\n});"
 ];
 
+// Random web title array
+var titleArray = [
+  'Catching net::ERR_NAME_NOT_RESOLVED for fixing bad img links',
+  'Re-firing pointer events onto lower layer (for irregular-shaped dragging with interact.js)',
+  'Undoing the merge in Git so that no commits from the other branch exist',
+  'Why aren’t we using SSH for everything?',
+  'TypeScript for busy C# Developers — 1: Files and Compilation',
+  'Pass value from EditorTemplate to its Layout Template only, in mvc 6',
+  'Use a different region notation than the system\'s region notation',
+  'ThreeJS MeshPhongMaterial renders black (MeshLambertMaterial renders correctly)',
+  'How to create a partially-rounded-corners-rectangular drawable with center-crop and without creating new bitmap?',
+  'Django: Replacement for the default ManyToMany Widget of Forms',
+  'Angular Testing: Spy a function that was executed on the initialize of a controller',
+  'Navigation with nested list: Screen reader support for list labels and nesting level',
+  'Error installing cordova-plugin-inappbrowser: “Error: Expected ”*/“ or [^*] but ”*“ found”',
+  'How should I make sure the user accessing a backend rendered frontend route is authenticated?',
+  'JavaScript Modules: A Beginner’s Guide',
+  'Enzyme: JavaScript Testing utilities for React',
+  'Using Graph Theory to Build a Simple Recommendation Engine in JavaScript',
+  'Covariance and Contravariance Demystified [in C#]',
+  'Simple example of dependency injection in C#',
+  'Async, recursion, and some weirdness in design of asynchronous API in C#'
+];
+
 // Create CSS
 var head = document.getElementsByTagName('head')[0];
 var sheet = window.document.styleSheets[0];
@@ -52,8 +76,13 @@ sheet.insertRule('pre.prettyprint { background: #FFF !important; }', 0);
 // Loading Options
 chrome.storage.sync.get({
   element: ['p', 'br'],
-  paragraph: 2
+  paragraph: 2,
+  enableTitle: false
 }, function(items) {
+  // Change web title if enableTitle is true
+  if (items.enableTitle)
+    document.title = titleArray[Math.floor(Math.random() * titleArray.length)];
+
   // Defined what element to catch as a paragraph
   var divs = document.querySelectorAll(items.element);
   console.log('Load element options : ' + items.element);

@@ -2,7 +2,8 @@ function loadOptions() {
   // Set default options as p
   chrome.storage.sync.get({
     element: ['p', 'br'],
-    paragraph: 2
+    paragraph: 2,
+    enableTitle: false
   }, function(items) {
     var select = document.getElementById('element');
     var options = select && select.options;
@@ -12,8 +13,10 @@ function loadOptions() {
     }
     $('select').material_select();
     document.getElementById('paragraph').value = items.paragraph;
+    document.getElementById('enableTitle').checked = items.enableTitle;
     console.log('Load element options : ' + items.element);
     console.log('Load paragraph options : ' + items.paragraph);
+    console.log('Load enableTitle options : ' + items.enableTitle);
   });
 }
 
@@ -26,13 +29,16 @@ function saveOptions() {
     if (options[i].selected)
       element.push(options[i].value);
   }
+  var enableTitle = document.getElementById('enableTitle').checked;
   chrome.storage.sync.set({
     element: element,
-    paragraph: paragraph
+    paragraph: paragraph,
+    enableTitle: enableTitle
   }, function() {
     // Update status to let user know options were saved.
     console.log('Set element options as ' + element);
     console.log('Set paragraph options as ' + paragraph);
+    console.log('Set enableTitle options as ' + enableTitle);
     Materialize.toast('Options saved.', 4000, 'status');
   });
 }
