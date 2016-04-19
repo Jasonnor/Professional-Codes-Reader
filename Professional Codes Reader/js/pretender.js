@@ -39,8 +39,6 @@ var titleArray = [
   'Catching net::ERR_NAME_NOT_RESOLVED for fixing bad img links',
   'Re-firing pointer events onto lower layer (for irregular-shaped dragging with interact.js)',
   'Undoing the merge in Git so that no commits from the other branch exist',
-  'Why aren’t we using SSH for everything?',
-  'TypeScript for busy C# Developers — 1: Files and Compilation',
   'Pass value from EditorTemplate to its Layout Template only, in mvc 6',
   'Use a different region notation than the system\'s region notation',
   'ThreeJS MeshPhongMaterial renders black (MeshLambertMaterial renders correctly)',
@@ -50,11 +48,13 @@ var titleArray = [
   'Navigation with nested list: Screen reader support for list labels and nesting level',
   'Error installing cordova-plugin-inappbrowser: “Error: Expected ”*/“ or [^*] but ”*“ found”',
   'How should I make sure the user accessing a backend rendered frontend route is authenticated?',
+  'Why aren’t we using SSH for everything?',
   'JavaScript Modules: A Beginner’s Guide',
   'Enzyme: JavaScript Testing utilities for React',
   'Using Graph Theory to Build a Simple Recommendation Engine in JavaScript',
   'Covariance and Contravariance Demystified [in C#]',
   'Simple example of dependency injection in C#',
+  'TypeScript for busy C# Developers — 1: Files and Compilation',
   'Async, recursion, and some weirdness in design of asynchronous API in C#'
 ];
 
@@ -82,6 +82,7 @@ chrome.storage.sync.get({
   // Change web title if enableTitle is true
   if (items.enableTitle)
     document.title = titleArray[Math.floor(Math.random() * titleArray.length)];
+  console.log('Load enableTitle options : ' + items.enableTitle);
 
   // Defined what element to catch as a paragraph
   var divs = document.querySelectorAll(items.element);

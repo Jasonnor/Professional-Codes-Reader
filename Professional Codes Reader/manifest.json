@@ -18,6 +18,7 @@
   "options_page": "options.html",
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "tabs", "http://*/*"
   ]
 }
