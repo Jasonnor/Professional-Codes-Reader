@@ -71,7 +71,7 @@ namespace Professional_Codes_Reader
                 code = code.OrderBy(o => rand.Next()).ToArray();
 
                 // Delete old file
-                if(File.Exists(newFilePath))
+                if (File.Exists(newFilePath))
                     File.Delete(newFilePath);
 
                 // Write Header

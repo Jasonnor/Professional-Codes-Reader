@@ -10,8 +10,8 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
         'www.infoq.com',
         '36kr.com'
       ];
-      for(var autoUrl in autoRun)
-        if (url.indexOf(autoUrl) > -1) {
+      for (var i = 0; i < autoRun.length; i++)
+        if (url.indexOf(autoRun[i]) > -1) {
           chrome.tabs.executeScript(null, {file: 'js/pretender.js'});
           break;
         }

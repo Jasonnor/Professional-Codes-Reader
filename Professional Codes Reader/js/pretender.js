@@ -38,7 +38,9 @@ var codeArray = [
 var titleArray = [
   'Catching net::ERR_NAME_NOT_RESOLVED for fixing bad img links',
   'Re-firing pointer events onto lower layer (for irregular-shaped dragging with interact.js)',
+  'Why setConfiguration(Configuration conf) method of UserGroupInformation class is static?',
   'Undoing the merge in Git so that no commits from the other branch exist',
+  'nf_conntrack_helper_register of unregistred port reutrn error',
   'Pass value from EditorTemplate to its Layout Template only, in mvc 6',
   'Use a different region notation than the system\'s region notation',
   'ThreeJS MeshPhongMaterial renders black (MeshLambertMaterial renders correctly)',
@@ -48,12 +50,15 @@ var titleArray = [
   'Navigation with nested list: Screen reader support for list labels and nesting level',
   'Error installing cordova-plugin-inappbrowser: “Error: Expected ”*/“ or [^*] but ”*“ found”',
   'How should I make sure the user accessing a backend rendered frontend route is authenticated?',
-  'Why aren’t we using SSH for everything?',
+  'Hook the global name lookup in a python interpreter',
+  'Why aren\'t we using SSH for everything?',
+  'Is it possible to create inputAccessoryView above the keyboard for the full width of the screen in the split mode?',
+  'GCM registration is not ready with auth credentials in ios9',
   'JavaScript Modules: A Beginner’s Guide',
   'Enzyme: JavaScript Testing utilities for React',
   'Using Graph Theory to Build a Simple Recommendation Engine in JavaScript',
+  'Creating a popup like state using AngularJS ui-router',
   'Covariance and Contravariance Demystified [in C#]',
-  'Simple example of dependency injection in C#',
   'TypeScript for busy C# Developers — 1: Files and Compilation',
   'Async, recursion, and some weirdness in design of asynchronous API in C#'
 ];
@@ -83,24 +88,28 @@ chrome.storage.sync.get({
   if (items.enableTitle)
     document.title = titleArray[Math.floor(Math.random() * titleArray.length)];
   console.log('Load enableTitle options : ' + items.enableTitle);
-
   // Defined what element to catch as a paragraph
   var divs = document.querySelectorAll(items.element);
   console.log('Load element options : ' + items.element);
-
   // Defined how many paragraphs to insert code
   var paragraph = items.paragraph;
   console.log('Load paragraph options : ' + items.paragraph);
-
+  var codeCount = 0;
+  shuffle(codeArray);
   for (var i = 0; i < divs.length; i++) {
     // Insert codes every N paragraph
     if (i % paragraph === 0) {
       var newNode = document.createElement('pre');
       newNode.className = 'prettyprint linenums';
       newNode.style.cssText = 'width:auto; overflow:auto; max-height:600px; margin:20px auto;';
-      content = document.createTextNode(codeArray[Math.floor((Math.random() * codeArray.length))]);
+      content = document.createTextNode(codeArray[codeCount]);
       newNode.appendChild(content);
       divs[i].parentNode.insertBefore(newNode, divs[i].nextSibling);
+      ++codeCount;
+      if (codeCount >= codeArray.length) {
+        shuffle(codeArray);
+        codeCount = 0;
+      }
     }
   }
 });
@@ -110,3 +119,17 @@ var script = document.createElement('script');
 script.type = 'text/javascript';
 script.src = 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true';
 head.appendChild(script);
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (currentIndex !== 0) {
+    // Pick a remaining element
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
