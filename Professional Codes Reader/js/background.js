@@ -8,11 +8,13 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
       var autoRun = [
         'www.uukanshu.com',
         'www.infoq.com',
-        '36kr.com'
+        '36kr.com',
+        'acgspace.wsfun.com',
+        'gamer.com.tw'
       ];
       for (var i = 0; i < autoRun.length; i++)
         if (url.indexOf(autoRun[i]) > -1) {
-          chrome.tabs.executeScript(null, {file: 'js/pretender.js'});
+          chrome.tabs.executeScript(tabId, {file: 'js/pretender.js'});
           break;
         }
     }
