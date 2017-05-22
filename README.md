@@ -4,33 +4,33 @@ Professional Codes Reader can insert random C#, PHP or jQuery code to paragraphs
 
 It also have WinForms Application version, see [here](/WinForms-Application/).
 
-![Options](/Example/Options.png)
+![Options](/Example/options.png)
 
 ## Novels
 
 **Before**
 
-![Before](/Example/Novel_Before.png)
+![Before](/Example/novel-before.png)
 
 **After**
 
-![After](/Example/Novel_After.png)
+![After](/Example/novel-after.png)
 
 ## Articles
 
 **Before**
 
-![Before](/Example/Article_Before.png)
+![Before](/Example/article-before.png)
 
 **After**
 
-![After](/Example/Article_After.png)
+![After](/Example/article-after.png)
 
 ## Demo
 
-![Feedly](/Example/Demo_Feedly.gif)
+![Feedly](/Example/demo-feedly.gif)
 
-![Wikipedia](/Example/Demo_Wikipedia.gif)
+![Wikipedia](/Example/demo-wikipedia.gif)
 
 ## Reference
 
