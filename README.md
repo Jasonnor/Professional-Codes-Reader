@@ -38,11 +38,14 @@ It also have WinForms Application version, see [here](/WinForms-Application/).
 2. Open the Chrome extension page (chrome://extensions)
 3. Drag the .crx file downloaded in the first step into the extensions page
 4. Select "Add extension"
-	![Add-Extension](/Example/add-extension.png)
+
+![Add-Extension](/Example/add-extension.png)
+
 5. You will see a quill pen icon in the toolbar, and the installation is successful
 6. Click the icon to insert the code on the current page
 7. Right-click the icon to open the Options page and set the action
-    ![Options](/Example/options.png)
+
+![Options](/Example/options.png)
 
 ## Reference
 
