@@ -1,4 +1,4 @@
-# [Professional Codes Reader](https://chrome.google.com/webstore/detail/professional-codes-reader/bmiklhlglhkagnpamkmdhgpbiolnbgac) [![Build Status](https://travis-ci.org/Jasonnor/Professional-Codes-Reader.svg?branch=v1.0.3)](https://travis-ci.org/Jasonnor/Professional-Codes-Reader)
+# [Professional Codes Reader](https://chrome.google.com/webstore/detail/professional-codes-reader/bmiklhlglhkagnpamkmdhgpbiolnbgac) [![Build Status](https://travis-ci.org/Jasonnor/Professional-Codes-Reader.svg?branch=master)](https://travis-ci.org/Jasonnor/Professional-Codes-Reader)
 
 ![Logo](/assets/logo440x280.png)
 
